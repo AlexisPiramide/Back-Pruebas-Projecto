@@ -33,4 +33,22 @@ router.post("/añadir",isAuth, async (req: Request, res: Response) => {
     res.json({ usuario });
 });
 
+router.put("/modificar",isAuth, async (req: Request, res: Response) => {
+    const email = req.body.email;
+    const { telefono, direccion, ciudad, pais, codigo_postal } = req.body;
+    const usuarioAPI: Usuario = {
+        email
+    };
+    const contactoAPI = {
+        telefono,
+        direccion,
+        ciudad,
+        pais,
+        codigo_postal,
+    };
+
+    const contacto = await contactosUsecases.modificar(contactoAPI, usuarioAPI);
+    res.json({ contacto });
+});
+
 export default router;
