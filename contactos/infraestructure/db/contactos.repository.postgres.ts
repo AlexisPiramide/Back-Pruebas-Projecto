@@ -42,6 +42,7 @@ export default class ContactoRepositoryPostgres implements ContactoRepository {
         const { telefono, direccion, ciudad, pais, codigo_postal } = contacto;
         /**Por encima de aqui no hay que cambiar nada */
         // Inicializamos una cadena para almacenar los campos a actualizar
+        /*Este codigo es una prueba para solo actualizar los campos necesarios */
         let camposUpdate = ''; 
 
         if (telefono) {
