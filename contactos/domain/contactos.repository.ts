@@ -1,4 +1,4 @@
-import Usuario from '../../usuarios/domain/usuario';
+import Usuario from '../../usuarios/domain/Usuario';
 import Contacto from './contacto';
 
 export default interface ContactoRepository {
