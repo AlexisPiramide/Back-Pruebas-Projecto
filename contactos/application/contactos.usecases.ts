@@ -1,7 +1,7 @@
 import { compare } from "bcrypt";
 import { hash } from "../../context/security/encrypter";
 import ContactoRepository from "../domain/contactos.repository";
-import Usuario from "../../usuarios/domain/usuario";
+import Usuario from "../../usuarios/domain/Usuario";
 import Contacto from "../domain/contacto";
 
 export default class ContactosUseCases {
