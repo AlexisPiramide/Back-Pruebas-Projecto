@@ -3,6 +3,7 @@ import OfertaRepositoryPostgres from "../db/oferta.repository.postgres";
 import OfertaUseCases from "../../application/ofertas.usecases";
 import express from "express";
 import Usuario from "../../../usuarios/domain/Usuario";
+import { isAuth, isEmpresa } from "../../../context/security/auth";
 
 const ofertaRepository: OfertaRepository = new OfertaRepositoryPostgres();
 
@@ -24,7 +25,7 @@ router.get("/ofertas/:id", async (req, res) => {
     res.json(oferta);
 });
 
-router.post("/ofertas", async (req, res) => {
+router.post("/ofertas",isAuth ,isEmpresa, async (req, res) => {
     const { titulo, descripcion, fecha_publicacion, estado } = req.body;
     const ofertaAPI = {
         titulo,
@@ -36,7 +37,7 @@ router.post("/ofertas", async (req, res) => {
     res.json(oferta);
 });
 
-router.delete("/ofertas/:id", async (req, res) => {
+router.delete("/ofertas/:id",isAuth ,isEmpresa, async (req, res) => {
     const id = parseInt(req.params.id);
     const eliminado = await ofertaUseCases.eliminar(id);
     res.json(eliminado);
