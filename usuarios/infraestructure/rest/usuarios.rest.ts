@@ -6,7 +6,7 @@ import UsuarioUseCases from "../../application/usuarios.usecases";
 import UsuarioRepository from "../../domain/usuarios.repository";
 //implementations
 import UsuarioRepositoryPostgres from "../db/usuarios.repository.postgres";
-import Usuario from "../../domain/usuario";
+import Usuario from "../../domain/Usuario";
 import { createToken } from "../../../context/security/auth";
 
 const usuariosRepository: UsuarioRepository = new UsuarioRepositoryPostgres();

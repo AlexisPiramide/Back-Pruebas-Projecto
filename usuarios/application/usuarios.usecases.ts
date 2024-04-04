@@ -1,10 +1,10 @@
 import { compare } from "bcrypt";
-import Usuario from "../domain/usuario";
+import Usuario from "../domain/Usuario";
 import UsuarioRepository from "../domain/usuarios.repository";
 import { hash } from "../../context/security/encrypter";
 
 export default class UsuarioUseCases {
-  constructor(private usuarioRepository: UsuarioRepository) {}
+  constructor(private usuarioRepository: UsuarioRepository) { }
 
   async registro(usuario: Usuario): Promise<Usuario> {
     if (!usuario.password) throw new Error("Falta password");

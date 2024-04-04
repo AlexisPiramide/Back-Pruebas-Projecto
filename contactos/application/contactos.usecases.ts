@@ -15,5 +15,6 @@ export default class ContactosUseCases {
     async modificar(contacto: Contacto, usuario: Usuario): Promise<Contacto> {
         return this.contactoRepository.modificar(contacto, usuario);
     }
+    
 
 }
