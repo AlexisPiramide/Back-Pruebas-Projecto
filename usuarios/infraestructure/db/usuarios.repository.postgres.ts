@@ -1,5 +1,5 @@
 import executeQuery from "../../../context/postgres.connector";
-import Usuario from "../../domain/Usuario";
+import Usuario from "../../domain/usuario";
 import UsuarioRepository from "../../domain/usuarios.repository";
 
 export default class UsuarioRepositoryPostgres implements UsuarioRepository {
