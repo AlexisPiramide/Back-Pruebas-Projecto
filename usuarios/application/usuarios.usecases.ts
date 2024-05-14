@@ -1,5 +1,5 @@
 import { compare } from "bcrypt";
-import Usuario from "../domain/Usuario";
+import Usuario from "../domain/usuario";
 import UsuarioRepository from "../domain/usuarios.repository";
 import { hash } from "../../context/security/encrypter";
 

@@ -1,8 +1,8 @@
-import OfertaRepository from "../../domain/Ofertas.repository";
+import OfertaRepository from "../../domain/ofertas.repository";
 import OfertaRepositoryPostgres from "../db/oferta.repository.postgres";
 import OfertaUseCases from "../../application/ofertas.usecases";
 import express from "express";
-import Usuario from "../../../usuarios/domain/Usuario";
+import Usuario from "../../../usuarios/domain/usuario";
 import { isAuth, isEmpresa } from "../../../context/security/auth";
 
 const ofertaRepository: OfertaRepository = new OfertaRepositoryPostgres();

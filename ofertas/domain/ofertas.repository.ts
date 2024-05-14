@@ -1,5 +1,5 @@
-import Usuario from "../../usuarios/domain/Usuario";
-import Oferta from "./Oferta";
+import Usuario from "../../usuarios/domain/usuario";
+import Oferta from "./oferta";
 
 export default interface OfertaRepository {
 

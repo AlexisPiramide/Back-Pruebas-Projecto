@@ -1,6 +1,6 @@
-import OfertaRepository from "../domain/Ofertas.repository";
-import Oferta from "../domain/Oferta";
-import Usuario from "../../usuarios/domain/Usuario";
+import OfertaRepository from "../domain/ofertas.repository";
+import Oferta from "../domain/oferta";
+import Usuario from "../../usuarios/domain/usuario";
 
 export default class OfertasUseCases {
     constructor(private ofertasRepository: OfertaRepository) { }

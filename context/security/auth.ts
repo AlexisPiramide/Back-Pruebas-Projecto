@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import jwt, { Secret } from "jsonwebtoken";
-import Usuario from "../../usuarios/domain/Usuario";
+import Usuario from "../../usuarios/domain/usuario";
 const SECRET_KEY: Secret = "miclave";
 
 const decode = (token: string) => {

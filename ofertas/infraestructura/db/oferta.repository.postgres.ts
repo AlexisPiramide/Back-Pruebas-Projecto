@@ -1,7 +1,7 @@
 import executeQuery from "../../../context/postgres.connector";
-import Usuario from "../../../usuarios/domain/Usuario";
-import Oferta from "../../domain/Oferta";
-import OfertaRepository from "../../domain/Ofertas.repository";
+import Usuario from "../../../usuarios/domain/usuario";
+import Oferta from "../../domain/oferta";
+import OfertaRepository from "../../domain/ofertas.repository";
 
 export default class OfertaRepositoryPostgres implements OfertaRepository {
 
